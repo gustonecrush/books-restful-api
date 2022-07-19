@@ -5,7 +5,7 @@
 Request :
 
 -   Method : POST
--   Endpoint : `/api/products`
+-   Endpoint : `/api/books`
 -   Header :
     -   Content-Type: application/json
     -   Accept: application/json
@@ -44,7 +44,7 @@ Response :
 Request :
 
 -   Method : GET
--   Endpoint : `/api/products/{id_product}`
+-   Endpoint : `/api/books/{id}`
 -   Header :
     -   Accept: application/json
 
@@ -71,7 +71,7 @@ Response :
 Request :
 
 -   Method : PUT
--   Endpoint : `/api/products/{id_product}`
+-   Endpoint : `/api/books/{id}`
 -   Header :
     -   Content-Type: application/json
     -   Accept: application/json
@@ -109,7 +109,7 @@ Response :
 Request :
 
 -   Method : GET
--   Endpoint : `/api/products`
+-   Endpoint : `/api/books`
 -   Header :
     -   Accept: application/json
 
@@ -147,7 +147,7 @@ Response :
 Request :
 
 -   Method : DELETE
--   Endpoint : `/api/products/{id_product}`
+-   Endpoint : `/api/books/{id}`
 -   Header :
     -   Accept: application/json
 
