@@ -71,7 +71,7 @@ function Form({ formik }) {
                     <Input
                         placeholder="Enter Price"
                         id="price"
-                        type="number"
+                        type="text"
                         name="price"
                         onChange={formik.handleChange}
                         value={formik.values.price}
