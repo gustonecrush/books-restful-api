@@ -1,160 +1,161 @@
 # API Spec
 
-## Authentication
-
-All API must use this authentication
+## Create Book
 
 Request :
-- Header :
-    - X-Api-Key : "your secret api key"
 
-## Create Product
+-   Method : POST
+-   Endpoint : `/api/products`
+-   Header :
+    -   Content-Type: application/json
+    -   Accept: application/json
+-   Body :
 
-Request :
-- Method : POST
-- Endpoint : `/api/products`
-- Header :
-    - Content-Type: application/json
-    - Accept: application/json
-- Body :
-
-```json 
+```json
 {
-    "id" : "string, unique",
-    "name" : "string",
-    "price" : "long",
-    "quantity" : "integer"
+    "id": "string, unique",
+    "name": "string",
+    "author": "string",
+    "description": "string",
+    "price": "integer"
 }
 ```
 
 Response :
 
-```json 
+```json
 {
-    "code" : "number",
-    "status" : "string",
-    "data" : {
-         "id" : "string, unique",
-         "name" : "string",
-         "price" : "long",
-         "quantity" : "integer",
-         "createdAt" : "date",
-         "updatedAt" : "date"
-     }
+    "success": "boolean",
+    "message": "string",
+    "data": {
+        "id": "string, unique",
+        "name": "string",
+        "author": "string",
+        "description": "string",
+        "price": "integer",
+        "createdAt": "date",
+        "updatedAt": "date"
+    }
 }
 ```
 
-## Get Product
+## Get Book
 
 Request :
-- Method : GET
-- Endpoint : `/api/products/{id_product}`
-- Header :
-    - Accept: application/json
+
+-   Method : GET
+-   Endpoint : `/api/products/{id_product}`
+-   Header :
+    -   Accept: application/json
 
 Response :
 
-```json 
+```json
 {
-    "code" : "number",
-    "status" : "string",
-    "data" : {
-         "id" : "string, unique",
-         "name" : "string",
-         "price" : "long",
-         "quantity" : "integer",
-         "createdAt" : "date",
-         "updatedAt" : "date"
-     }
+    "success": "boolean",
+    "message": "string",
+    "data": {
+        "id": "string, unique",
+        "name": "string",
+        "author": "string",
+        "description": "string",
+        "price": "integer",
+        "createdAt": "date",
+        "updatedAt": "date"
+    }
 }
 ```
 
-## Update Product
+## Update Book
 
 Request :
-- Method : PUT
-- Endpoint : `/api/products/{id_product}`
-- Header :
-    - Content-Type: application/json
-    - Accept: application/json
-- Body :
 
-```json 
+-   Method : PUT
+-   Endpoint : `/api/products/{id_product}`
+-   Header :
+    -   Content-Type: application/json
+    -   Accept: application/json
+-   Body :
+
+```json
 {
-    "name" : "string",
-    "price" : "long",
-    "quantity" : "integer"
+    "name": "string",
+    "author": "string",
+    "description": "string",
+    "price": "integer"
 }
 ```
 
 Response :
 
-```json 
+```json
 {
-    "code" : "number",
-    "status" : "string",
-    "data" : {
-         "id" : "string, unique",
-         "name" : "string",
-         "price" : "long",
-         "quantity" : "integer",
-         "createdAt" : "date",
-         "updatedAt" : "date"
-     }
+    "success": "boolean",
+    "message": "string",
+    "data": {
+        "id": "string, unique",
+        "name": "string",
+        "author": "string",
+        "description": "string",
+        "price": "integer",
+        "createdAt": "date",
+        "updatedAt": "date"
+    }
 }
 ```
 
-## List Product
+## List Book
 
 Request :
-- Method : GET
-- Endpoint : `/api/products`
-- Header :
-    - Accept: application/json
-- Query Param :
-    - size : number,
-    - page : number
+
+-   Method : GET
+-   Endpoint : `/api/products`
+-   Header :
+    -   Accept: application/json
 
 Response :
 
-```json 
+```json
 {
-    "code" : "number",
-    "status" : "string",
-    "data" : [
+    "code": "number",
+    "status": "string",
+    "data": [
         {
-             "id" : "string, unique",
-             "name" : "string",
-             "price" : "long",
-             "quantity" : "integer",
-             "createdAt" : "date",
-             "updatedAt" : "date"
+            "id": "string, unique",
+            "name": "string",
+            "author": "string",
+            "description": "string",
+            "price": "integer",
+            "createdAt": "date",
+            "updatedAt": "date"
         },
         {
-             "id" : "string, unique",
-             "name" : "string",
-             "price" : "long",
-             "quantity" : "integer",
-             "createdAt" : "date",
-             "updatedAt" : "date"
-         }
+            "id": "string, unique",
+            "name": "string",
+            "author": "string",
+            "description": "string",
+            "price": "integer",
+            "createdAt": "date",
+            "updatedAt": "date"
+        }
     ]
 }
 ```
 
-## Delete Product
+## Delete Book
 
 Request :
-- Method : DELETE
-- Endpoint : `/api/products/{id_product}`
-- Header :
-    - Accept: application/json
+
+-   Method : DELETE
+-   Endpoint : `/api/products/{id_product}`
+-   Header :
+    -   Accept: application/json
 
 Response :
 
-```json 
+```json
 {
-    "code" : "number",
-    "status" : "string"
+    "status": "boolean",
+    "message": "string"
 }
 ```
